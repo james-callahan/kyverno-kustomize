@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: kyverno:background-controller
+rules:
+  - apiGroups: ['']
+    resources:
+      - configmaps
+    verbs:
+      - get
+      - list
+      - watch
+    resourceNames:
+      - kyverno
+      - kyverno-metrics
+  - apiGroups: [coordination.k8s.io]
+    resources:
+      - leases
+    verbs:
+      - create
+      - delete
+      - get
+      - patch
+      - update
