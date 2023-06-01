@@ -4,6 +4,7 @@ commonLabels:
   app.kubernetes.io/component: admission-controller
   app.kubernetes.io/part-of: kyverno
 resources:
+  - ../configurations/prometheus-operator
   - clusterrolebinding.yaml
   - clusterrole.yaml
   - deployment.yaml
