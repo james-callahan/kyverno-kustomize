@@ -15,4 +15,6 @@ resources:
   - service.yaml
 images:
   - name: ghcr.io/kyverno/kyverno
+    newTag: v1.10.0@sha256:59a01a747f3efd6d3356ab1fad19af2b71b604289adee6589bec600933d01a0e
   - name: ghcr.io/kyverno/kyvernopre
+    newTag: v1.10.0@sha256:81aa67584e1c71e83429f31fe1bc3c99550418639ba6e6735aea07bce9a4c7c8
