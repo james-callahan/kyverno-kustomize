@@ -72,9 +72,12 @@ spec:
               value: system:serviceaccount:$(KYVERNO_NAMESPACE):kyverno-background-controller
             - name: KYVERNO_ENABLE_TRACING
               value: "false"
+            - name: KYVERNO_ENABLE_POLICY_EXCEPTION
+              value: "false"
           args:
             - --backgroundServiceAccountName=$(KYVERNO_BACKGROUD_CONTROLLER_SERVICE_ACCOUNT)
             - --enableTracing=$(KYVERNO_ENABLE_TRACING)
+            - --enablePolicyException=$(KYVERNO_ENABLE_POLICY_EXCEPTION)
           resources:
             limits:
               memory: 384Mi

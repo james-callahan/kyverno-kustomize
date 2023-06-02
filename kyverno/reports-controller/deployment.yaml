@@ -35,9 +35,12 @@ spec:
               value: /.sigstore
             - name: KYVERNO_ENABLE_TRACING
               value: "false"
+            - name: KYVERNO_ENABLE_POLICY_EXCEPTION
+              value: "false"
           image: ghcr.io/kyverno/reports-controller
           args:
             - --enableTracing=$(KYVERNO_ENABLE_TRACING)
+            - --enablePolicyException=$(KYVERNO_ENABLE_POLICY_EXCEPTION)
           ports:
             - containerPort: 9443
               name: https
