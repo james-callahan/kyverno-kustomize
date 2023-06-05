@@ -8,9 +8,6 @@ configMapGenerator:
     options:
       disableNameSuffixHash: true
     literals:
-      - enableDefaultRegistryMutation=true
-      - defaultRegistry=docker.io
-      - generateSuccessEvents=false
       - excludeGroups=system:nodes
       - >-
         resourceFilters=
