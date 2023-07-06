@@ -6,4 +6,5 @@ spec:
   endpoints:
     - port: metrics-port
       interval: 30s
+      metricRelabelings: []
       scrapeTimeout: 25s
