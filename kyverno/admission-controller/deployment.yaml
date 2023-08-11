@@ -132,6 +132,21 @@ spec:
           volumeMounts:
             - mountPath: /.sigstore
               name: sigstore
+      topologySpreadConstraints:
+        - topologyKey: kubernetes.io/hostname
+          labelSelector:
+            matchLabels: {}
+          matchLabelKeys:
+            - pod-template-hash
+          maxSkew: 1
+          whenUnsatisfiable: DoNotSchedule
+        - topologyKey: topology.kubernetes.io/zone
+          labelSelector:
+            matchLabels: {}
+          matchLabelKeys:
+            - pod-template-hash
+          maxSkew: 1
+          whenUnsatisfiable: ScheduleAnyway
       volumes:
         - name: sigstore
           emptyDir: {}
