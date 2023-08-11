@@ -15,6 +15,9 @@ resources:
   - serviceaccount.yaml
   - servicemonitor.yaml
   - service.yaml
+replicas:
+  - name: kyverno-admission-controller
+    count: 2
 images:
   - name: ghcr.io/kyverno/kyverno
     newTag: v1.10.2@sha256:7f3e73abc3e7ee05677ef76f0b3e3e7f1ef233bf6dd9a2b3871508a407ac1abb
