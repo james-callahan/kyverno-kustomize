@@ -22,4 +22,4 @@ images:
   - name: ghcr.io/kyverno/kyverno
     newTag: v1.10.3@sha256:2e8ba9281d587a7eac78b4cfbb877c57fd3b948d13547192e950b00f961b1a4e
   - name: ghcr.io/kyverno/kyvernopre
-    newTag: v1.10.3@sha256:4022f4b828418df94f61627bdc0852207986c095be9dbff686b57cb22b4c20ad
+    newTag: v1.10.5@sha256:59b0bed6e351bc39e408089660927f01e6a1e0d27e4b15f17bdd30e8a556a654
