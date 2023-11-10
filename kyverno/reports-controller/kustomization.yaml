@@ -16,4 +16,4 @@ resources:
   - service.yaml
 images:
   - name: ghcr.io/kyverno/reports-controller
-    newTag: v1.10.3@sha256:b0fbfe5a7250fadd120ffbb6dd4cb70e575bddc165da76b46e3b7dab4d275141
+    newTag: v1.10.5@sha256:a04dca1cdd6bc7e7c889f4a928113c1dbc6a134fad06baf161403e4da8b4b313
