@@ -12,16 +12,11 @@ metadata:
   name: kyverno:background-controller:core
 rules:
   - apiGroups:
-      - '*'
-    resources:
-      - '*'
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
       - kyverno.io
     resources:
+      - policies
+      - clusterpolicies
+      - policyexceptions
       - updaterequests
       - updaterequests/status
     verbs:
@@ -35,13 +30,33 @@ rules:
       - deletecollection
   - apiGroups:
       - ''
+    resources:
+      - namespaces
+      - configmaps
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - ''
       - events.k8s.io
     resources:
       - events
     verbs:
       - create
-      - update
+      - get
+      - list
       - patch
+      - update
+      - watch
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs:
+      - get
+      - list
+      - watch
   - apiGroups:
       - networking.k8s.io
     resources:
@@ -54,22 +69,22 @@ rules:
       - patch
       - delete
   - apiGroups:
-      - ""
+      - rbac.authorization.k8s.io
     resources:
-      - configmaps
-      - secrets
-      - resourcequotas
-      - limitranges
+      - rolebindings
+      - roles
     verbs:
       - create
       - update
       - patch
       - delete
   - apiGroups:
-      - rbac.authorization.k8s.io
+      - ""
     resources:
-      - rolebindings
-      - roles
+      - configmaps
+      - secrets
+      - resourcequotas
+      - limitranges
     verbs:
       - create
       - update

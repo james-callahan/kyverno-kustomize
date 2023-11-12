@@ -31,6 +31,10 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
+            - name: KYVERNO_SERVICEACCOUNT_NAME
+              value: kyverno-reports-controller
+            - name: KYVERNO_DEPLOYMENT
+              value: kyverno-reports-controller
             - name: TUF_ROOT
               value: /.sigstore
             - name: KYVERNO_ENABLE_TRACING
