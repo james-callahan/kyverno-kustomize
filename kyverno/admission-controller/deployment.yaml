@@ -34,6 +34,8 @@ spec:
             seccompProfile:
               type: RuntimeDefault
           env:
+            - name: INIT_CONFIG
+              value: kyverno
             - name: METRICS_CONFIG
               value: kyverno-metrics
             - name: KYVERNO_NAMESPACE
@@ -50,6 +52,8 @@ spec:
         - name: kyverno
           image: ghcr.io/kyverno/kyverno
           env:
+            - name: INIT_CONFIG
+              value: kyverno
             - name: METRICS_CONFIG
               value: kyverno-metrics
             - name: KYVERNO_NAMESPACE

@@ -21,6 +21,8 @@ spec:
       containers:
         - name: controller
           env:
+            - name: INIT_CONFIG
+              value: kyverno
             - name: METRICS_CONFIG
               value: kyverno-metrics
             - name: KYVERNO_POD_NAME
