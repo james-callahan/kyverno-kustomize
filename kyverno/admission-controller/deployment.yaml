@@ -79,6 +79,8 @@ spec:
             - name: KYVERNO_ENABLE_TRACING
               value: "false"
           args:
+            - --caSecretName=$(KYVERNO_SVC).$(KYVERNO_NAMESPACE).svc.kyverno-tls-ca
+            - --tlsSecretName=$(KYVERNO_SVC).$(KYVERNO_NAMESPACE).svc.kyverno-tls-pair
             - --backgroundServiceAccountName=$(KYVERNO_BACKGROUD_CONTROLLER_SERVICE_ACCOUNT)
             - --enableTracing=$(KYVERNO_ENABLE_TRACING)
           resources:
