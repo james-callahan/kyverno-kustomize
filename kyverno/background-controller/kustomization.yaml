@@ -16,4 +16,4 @@ resources:
   - service.yaml
 images:
   - name: ghcr.io/kyverno/background-controller
-    newTag: v1.11.0@sha256:4d252900a7607cf424bc5586bdaa25c77b38daac7a9b1aeb07fff1c35767ad91
+    newTag: v1.11.1@sha256:b3dbcc1ec0bc3b30f2a1de0746a5ca016e2a3736535b46d11d74802736af6d7c
