@@ -20,6 +20,6 @@ replicas:
     count: 2
 images:
   - name: ghcr.io/kyverno/kyverno
-    newTag: v1.11.4@sha256:76d0252892bab3b7682444f283660274977a6243450720a3893221b510eed94e
+    newTag: v1.12.1@sha256:5bbff326be5a2fa6da0bb2de8fdef347942508f3b0136aa41a3ba7ba434008d2
   - name: ghcr.io/kyverno/kyvernopre
-    newTag: v1.11.4@sha256:307d8838323bd1dfe14a9f92b92f25627d840d86c626decc3864adaf7de12092
+    newTag: v1.12.1@sha256:835e39f4871895520b650bf6ee7c6cb2aa3639f2fe07925785dce2b449bcb7d4
