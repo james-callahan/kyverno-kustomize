@@ -31,6 +31,7 @@ configMapGenerator:
           [BackgroundScanReport/*,*,*]
           [ClusterBackgroundScanReport,*,*]
           [ClusterBackgroundScanReport/*,*,*]
+      - webhookAnnotations={"admissions.enforcer/disabled":"true"}
   - name: kyverno-metrics
     options:
       disableNameSuffixHash: true

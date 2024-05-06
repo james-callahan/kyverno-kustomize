@@ -16,6 +16,7 @@ spec:
           args:
             - --loggingFormat=text
             - --v=2
+            - --omitEvents=PolicyApplied,PolicySkipped
           resources:
             limits:
               cpu: 100m

@@ -12,9 +12,17 @@ metadata:
   name: kyverno:reports-controller:core
 rules:
   - apiGroups:
-      - '*'
+      - apiextensions.k8s.io
     resources:
-      - '*'
+      - customresourcedefinitions
+    verbs:
+      - get
+  - apiGroups:
+      - ''
+    resources:
+      - secrets
+      - configmaps
+      - namespaces
     verbs:
       - get
       - list
@@ -22,10 +30,29 @@ rules:
   - apiGroups:
       - kyverno.io
     resources:
+      - globalcontextentries
+      - globalcontextentries/status
       - admissionreports
       - clusteradmissionreports
       - backgroundscanreports
       - clusterbackgroundscanreports
+      - policyexceptions
+      - policies
+      - clusterpolicies
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+      - deletecollection
+  - apiGroups:
+      - reports.kyverno.io
+    resources:
+      - ephemeralreports
+      - clusterephemeralreports
     verbs:
       - create
       - delete
@@ -59,3 +86,11 @@ rules:
     verbs:
       - create
       - patch
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs:
+      - get
+      - list
+      - watch

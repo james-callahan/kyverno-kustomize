@@ -44,6 +44,7 @@ spec:
           image: ghcr.io/kyverno/reports-controller
           args:
             - --enableTracing=$(KYVERNO_ENABLE_TRACING)
+            - --omitEvents=PolicyApplied,PolicySkipped
           ports:
             - containerPort: 9443
               name: https
