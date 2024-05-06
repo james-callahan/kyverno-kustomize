@@ -10,6 +10,7 @@ resources:
   - kyverno.io_clusterbackgroundscanreports.yaml
   - kyverno.io_clustercleanuppolicies.yaml
   - kyverno.io_clusterpolicies.yaml
+  - kyverno.io_globalcontextentries.yaml
   - kyverno.io_policies.yaml
   - kyverno.io_policyexceptions.yaml
   - kyverno.io_updaterequests.yaml
