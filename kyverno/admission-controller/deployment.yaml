@@ -16,7 +16,6 @@ spec:
           args:
             - --loggingFormat=text
             - --v=2
-            - --omitEvents=PolicyApplied,PolicySkipped
           resources:
             limits:
               cpu: 100m
@@ -84,6 +83,7 @@ spec:
             - --tlsSecretName=$(KYVERNO_SVC).$(KYVERNO_NAMESPACE).svc.kyverno-tls-pair
             - --backgroundServiceAccountName=$(KYVERNO_BACKGROUD_CONTROLLER_SERVICE_ACCOUNT)
             - --enableTracing=$(KYVERNO_ENABLE_TRACING)
+            - --omitEvents=PolicyApplied,PolicySkipped
           resources:
             limits:
               memory: 384Mi
