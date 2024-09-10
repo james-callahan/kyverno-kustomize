@@ -14,5 +14,7 @@ resources:
   - kyverno.io_policies.yaml
   - kyverno.io_policyexceptions.yaml
   - kyverno.io_updaterequests.yaml
+  - reports.kyverno.io_clusterephemeralreports.yaml
+  - reports.kyverno.io_ephemeralreports.yaml
   - wgpolicyk8s.io_clusterpolicyreports.yaml
   - wgpolicyk8s.io_policyreports.yaml
