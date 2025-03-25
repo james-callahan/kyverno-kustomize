@@ -23,14 +23,8 @@ configMapGenerator:
           [Pod/binding,*,*]
           [ReplicaSet,*,*]
           [ReplicaSet/*,*,*]
-          [AdmissionReport,*,*]
-          [AdmissionReport/*,*,*]
-          [ClusterAdmissionReport,*,*]
-          [ClusterAdmissionReport/*,*,*]
-          [BackgroundScanReport,*,*]
-          [BackgroundScanReport/*,*,*]
-          [ClusterBackgroundScanReport,*,*]
-          [ClusterBackgroundScanReport/*,*,*]
+          [EphemeralReport,*,*]
+          [ClusterEphemeralReport,*,*]
       - webhookAnnotations={"admissions.enforcer/disabled":"true"}
   - name: kyverno-metrics
     options:
