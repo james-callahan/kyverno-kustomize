@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  app.kubernetes.io/component: cleanup-controller
+  app.kubernetes.io/part-of: kyverno
+resources:
+  - ../../configurations/prometheus-operator
+  - clusterrolebinding.yaml
+  - clusterrole.yaml
+  - deployment.yaml
+  - networkpolicy.yaml
+  - rolebinding.yaml
+  - role.yaml
+  - serviceaccount.yaml
+  - servicemonitor.yaml
+  - service.yaml
+images:
+  - name: ghcr.io/kyverno/cleanup-controller
+    newTag: v1.13.4@sha256:8cb9ce52428611b49036e937ad4ea70c0d2b2b3a8fb5df0a6c958a398f2f8dd8

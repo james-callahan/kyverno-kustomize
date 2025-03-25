@@ -1,0 +1,10 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: kyverno-cleanup-controller
+spec:
+  endpoints:
+    - port: metrics-port
+      interval: 30s
+      metricRelabelings: []
+      scrapeTimeout: 25s

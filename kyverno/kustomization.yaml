@@ -8,4 +8,5 @@ resources:
   - ./rbac
   - ./admission-controller
   - ./background-controller
+  - ./cleanup-controller
   - ./reports-controller
