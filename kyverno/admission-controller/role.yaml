@@ -6,12 +6,15 @@ rules:
   - apiGroups: ['']
     resources:
       - secrets
+      - serviceaccounts
     verbs:
       - get
       - list
       - watch
+      - patch
       - create
       - update
+      - delete
   - apiGroups: ['']
     resources:
       - configmaps
@@ -35,7 +38,10 @@ rules:
   - apiGroups: [apps]
     resources:
       - deployments
+      - deployments/scale
     verbs:
       - get
       - list
       - watch
+      - patch
+      - update

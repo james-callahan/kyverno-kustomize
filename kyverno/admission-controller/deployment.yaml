@@ -68,6 +68,8 @@ spec:
                   fieldPath: metadata.name
             - name: KYVERNO_SERVICEACCOUNT_NAME
               value: kyverno-admission-controller
+            - name: KYVERNO_ROLE_NAME
+              value: kyverno:admission-controller
             - name: KYVERNO_SVC
               value: kyverno-svc
             - name: TUF_ROOT
