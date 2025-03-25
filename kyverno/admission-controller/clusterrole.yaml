@@ -4,7 +4,11 @@ metadata:
   name: kyverno:admission-controller
 aggregationRule:
   clusterRoleSelectors:
-    - matchLabels: {}
+    - matchLabels:
+        rbac.kyverno.io/aggregate-to-admission-controller: "true"
+    - matchLabels:
+        app.kubernetes.io/component: admission-controller
+        app.kubernetes.io/part-of: kyverno
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -124,14 +128,6 @@ rules:
       - create
       - update
       - patch
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - '*'
-    resources:
-      - '*'
-    verbs:
       - get
       - list
       - watch

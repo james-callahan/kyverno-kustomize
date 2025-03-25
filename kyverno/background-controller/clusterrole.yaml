@@ -4,7 +4,11 @@ metadata:
   name: kyverno:background-controller
 aggregationRule:
   clusterRoleSelectors:
-    - matchLabels: {}
+    - matchLabels:
+        rbac.kyverno.io/aggregate-to-background-controller: "true"
+    - matchLabels:
+        app.kubernetes.io/component: background-controller
+        app.kubernetes.io/part-of: kyverno
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -21,7 +25,9 @@ rules:
       - kyverno.io
     resources:
       - policies
+      - policies/status
       - clusterpolicies
+      - clusterpolicies/status
       - policyexceptions
       - updaterequests
       - updaterequests/status
@@ -58,13 +64,19 @@ rules:
       - update
       - watch
   - apiGroups:
-      - '*'
+      - reports.kyverno.io
     resources:
-      - '*'
+      - ephemeralreports
+      - clusterephemeralreports
     verbs:
+      - create
+      - delete
       - get
       - list
+      - patch
+      - update
       - watch
+      - deletecollection
   - apiGroups:
       - networking.k8s.io
     resources:
@@ -90,7 +102,6 @@ rules:
       - ""
     resources:
       - configmaps
-      - secrets
       - resourcequotas
       - limitranges
     verbs:
