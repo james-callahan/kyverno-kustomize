@@ -50,8 +50,8 @@ spec:
               name: metrics
               protocol: TCP
           args:
-            - --caSecretName=$(KYVERNO_SVC).$(KYVERNO_NAMESPACE).svc.kyverno-tls-ca
-            - --tlsSecretName=$(KYVERNO_SVC).$(KYVERNO_NAMESPACE).svc.kyverno-tls-pair
+            - --caSecretName=$(KYVERNO_SVC)-tls-ca
+            - --tlsSecretName=$(KYVERNO_SVC)-tls-pair
             - --enableDeferredLoading=true
             - --protectManagedResources=false
           resources:

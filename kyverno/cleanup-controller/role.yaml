@@ -20,8 +20,8 @@ rules:
       - update
       - watch
     resourceNames:
-      - kyverno-cleanup-controller.default.svc.kyverno-tls-ca
-      - kyverno-cleanup-controller.default.svc.kyverno-tls-pair
+      - kyverno-cleanup-controller-tls-ca
+      - kyverno-cleanup-controller-tls-pair
   - apiGroups:
       - ''
     resources:
