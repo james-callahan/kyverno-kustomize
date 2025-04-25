@@ -16,4 +16,4 @@ resources:
   - service.yaml
 images:
   - name: ghcr.io/kyverno/cleanup-controller
-    newTag: v1.13.4@sha256:8cb9ce52428611b49036e937ad4ea70c0d2b2b3a8fb5df0a6c958a398f2f8dd8
+    newTag: v1.14.0@sha256:9abb6d3ff058652b189f25c4333840c8491a4719cd26ac8c6bf24a99fc0f3092
