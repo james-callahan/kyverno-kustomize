@@ -10,6 +10,9 @@ resources:
   - kyverno.io_policies.yaml
   - kyverno.io_policyexceptions.yaml
   - kyverno.io_updaterequests.yaml
+  - policies.kyverno.io_imagevalidatingpolicies.yaml
+  - policies.kyverno.io_policyexceptions.yaml
+  - policies.kyverno.io_validatingpolicies.yaml
   - reports.kyverno.io_clusterephemeralreports.yaml
   - reports.kyverno.io_ephemeralreports.yaml
   - wgpolicyk8s.io_clusterpolicyreports.yaml
