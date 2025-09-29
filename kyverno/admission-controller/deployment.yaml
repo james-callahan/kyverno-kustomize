@@ -86,6 +86,7 @@ spec:
             - --backgroundServiceAccountName=$(KYVERNO_BACKGROUD_CONTROLLER_SERVICE_ACCOUNT)
             - --enableTracing=$(KYVERNO_ENABLE_TRACING)
             - --maxAdmissionReports=1000
+            - --controllerRuntimeMetricsAddress=:8080
             - --omitEvents=PolicyApplied,PolicySkipped
           resources:
             limits:
